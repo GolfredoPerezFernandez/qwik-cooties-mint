@@ -19,7 +19,11 @@ interface Metadata{
 }
 type NFTMetadata = Metadata[];
 
-
+declare global {
+  interface Window {
+    ethereum: any
+  }
+}
 
 export default component$(() => {
   useStyles$(styles);
